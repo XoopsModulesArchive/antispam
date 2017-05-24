@@ -1,6 +1,5 @@
 <?php
 /**
- * $Id: index.php v 1.0 2012 Yerres Exp $
  * Module: antispam
  * Version: v 1.00
  * Licence: GNU
@@ -18,7 +17,7 @@ if ( isset( $_POST['op'] ) ) $op = $_POST['op'];
 
 function showrecords() {
     global $xoopsDB, $xoopsModuleConfig;
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     // load our main include
     //require_once '../bad-behavior-xoops.php';
     //bb2_insert_stats($force = 0);
@@ -26,7 +25,7 @@ function showrecords() {
     
     include_once XOOPS_ROOT_PATH . "/class/xoopslists.php";
     include_once XOOPS_ROOT_PATH . "/class/pagenav.php";
-    $myts =& MyTextSanitizer::getInstance();
+    $myts = MyTextSanitizer::getInstance();
     $startlog = isset( $_GET['startlog'] ) ? intval( $_GET['startlog'] ) : 0;
     $resultA1 = $xoopsDB -> query( "SELECT COUNT(*)
                                    FROM " . $xoopsDB -> prefix( "antispam_log" ) . "
@@ -87,7 +86,7 @@ function showrecords() {
 
 function showdetails($id = '') {
   global $xoopsDB;
-  $myts =& MyTextSanitizer::getInstance();
+  $myts = MyTextSanitizer::getInstance();
   $id = ( isset( $_GET['id'] ) ) ? intval($_GET['id']) : intval($_POST['id']);
 
 

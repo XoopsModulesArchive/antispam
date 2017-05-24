@@ -5,7 +5,6 @@
  * @subpackage:: admin
  * @since::		 2.5.0
  * @author::     Magic.Shao <magic.shao@gmail.com> - Susheng Yang <ezskyyoung@gmail.com>
- * @version::    $Id $
 **/
 
 include("../../../mainfile.php");
@@ -13,7 +12,7 @@ include '../../../include/cp_header.php';
 include_once XOOPS_ROOT_PATH."/modules/antispam/admin/functions.php";
 include_once XOOPS_ROOT_PATH."/class/xoopsmodule.php";
 
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 
 if ( is_object( $xoopsUser)  ) {
     $xoopsModule = XoopsModule::getByDirname("antispam");
