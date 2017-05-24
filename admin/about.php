@@ -1,6 +1,5 @@
 <?php
 /**
- * $Id: about.php v 1.0 31 May 2012 Yerres Exp $
  * Module: antispam
  * Version: v 1.00 beta
  * Release Date: 31 May 2012
@@ -11,7 +10,7 @@
 
 include( "admin_header.php" );
 xoops_cp_header();
-$myts =& MyTextSanitizer::getInstance();
+$myts = MyTextSanitizer::getInstance();
 bb2_adminmenu(1, _INFO);
 
 
